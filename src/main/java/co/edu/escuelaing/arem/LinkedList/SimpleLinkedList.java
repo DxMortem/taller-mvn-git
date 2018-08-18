@@ -1,15 +1,26 @@
 package co.edu.escuelaing.arem.LinkedList;
 
+/*
+* Class that will be used as a node of a SimpleLinkedList
+* This node only accepts int numbers.
+* @author Diego Borrero
+* @version 1.0
+* */
 public class SimpleLinkedList {
 
     private Node head;
     private int size;
 
+    /*
+    *Constructor for SimpleLinkedList
+    */
     public SimpleLinkedList() {
         head = null;
         size = 0;
     }
-
+    /*add a number at the end of a LinkedList
+    * @param number to add at the end of List
+    */
     public void append(int data){
         if (head == null){
             head = new Node(data);
@@ -27,6 +38,9 @@ public class SimpleLinkedList {
         return size;
     }
 
+    /*Do a summatory of a LinkedList
+    * @return integer with the summatory of the list
+    */
     public int sum(){
         Node temp = head;
 
@@ -37,7 +51,9 @@ public class SimpleLinkedList {
         }
         return sum;
     }
-
+    /*Return a value that is in a certain position
+    *@return return the value of a given position
+    */
     public int positionValue(int position){
         Node temp = head;
         while (position != 0){

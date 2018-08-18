@@ -4,7 +4,12 @@ import co.edu.escuelaing.arem.LinkedList.SimpleLinkedList;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+/*
+* Aplicación principal encargada de leer y retornar la media y la desviación estandar de un grupo de numeros dados
+* @author Diego Borrero
+* @version 1.0
+*
+*/
 public class App {
     protected static SimpleLinkedList list;
 
@@ -26,10 +31,18 @@ public class App {
         }
     }
 
+    /*
+    *  Calculate the mean of a list of numbers
+    *  @param list with all the numbers that will need that mean be calculated
+    */
     public static double mean(SimpleLinkedList list){
         return (double)list.sum()/(list.getSize());
     }
 
+    /*
+    *  Calculate the standard Deviation of a list of numbers
+    *  @param list with all the numbers that will need that standard deviation be calculated
+    */
     public static double standardDeviation(SimpleLinkedList list){
         double sumatoria =0;
         for(int i=0; i<list.getSize(); i++){
